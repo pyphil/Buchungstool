@@ -41,7 +41,7 @@ class BuchungstoolApp:
         labelframe_3 = ttk.Labelframe(panedwindow_2)
         frame_6 = ttk.Frame(labelframe_3)
         self.label_top = ttk.Label(frame_6)
-        self.label_top.config(font='{Segoe UI} 12 {bold}', padding='20', text='Bitte Standort und Raum bzw. Geräte auswählen.')
+        self.label_top.config(font='{Segoe UI} 12 {bold}', padding='20', text='← Bitte zunächst Standort und Raum bzw. Geräte auswählen.')
         self.label_top.pack(side='top')
         frame_7 = ttk.Frame(frame_6)
         label_Jahr = ttk.Label(frame_7)
