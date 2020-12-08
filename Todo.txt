@@ -1,0 +1,18 @@
++ Comboboxen auf readonly stellen, da Freieinträge sinnlos sind und die Combobox dann auch überall angeklickt werden kann
+- Leeres Textfeld bei Kürzel nicht zulassen
+- Leeres Feld für Lerngruppe nicht zulassen
+
+Mit Umstieg auf pyQT erledigen:
+- Größenänderung Eintrag Dialog verhindern
++ Layout Ersteinrichtung verbessern
+- Keybinding für OK in Ersteinrichtung
+- Keybinding für OK bei Eintrag
+- OK Button für Datum ersetzen durch Eventbinding in den Comboboxen
+- Button zum Springen zur aktuellen Woche einbauen
+- Abstände in listbox?
+- Umwandlung des Kürzels in Großbuchstaben und nur 3 Buchstaben zulassen
+- Textlängenbegrenzung für Lerngruppe im Entry
+- Objekte inaktiv schalten vor erster Raum-/Geräte-Auswahl
+
+- anderes Raster für Besprechungsraum
+

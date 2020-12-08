@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="tk.Toplevel" id="ersteinrichtung">
+    <property name="geometry">280x180</property>
+    <property name="height">180</property>
+    <property name="title" translatable="yes">Buchungstool</property>
+    <property name="width">280</property>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="heading">
+            <property name="font">{Segoe UI} 12 {bold}</property>
+            <property name="text" translatable="yes">Ersteinrichtung</property>
+            <layout manager="pack">
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="subheading">
+            <property name="justify">center</property>
+            <property name="text" translatable="yes">Zur Ersteinrichtung des Buchungstools brauchen wir dein Lehrerkürzel.</property>
+            <property name="wraplength">210</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame2">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout manager="pack">
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="Label_krz">
+                <property name="font">{Segoe UI} 9 {bold}</property>
+                <property name="text" translatable="yes">Kürzel: </property>
+                <layout manager="pack">
+                  <property name="propagate">True</property>
+                  <property name="side">left</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Entry" id="self.krzEntry">
+                <property name="font">TkDefaultFont</property>
+                <property name="validate">none</property>
+                <layout manager="pack">
+                  <property name="propagate">True</property>
+                  <property name="side">left</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame3">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout manager="pack">
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+            <child>
+              <object class="ttk.Button" id="self.buttonOK">
+                <property name="command">ok</property>
+                <property name="text" translatable="yes">OK</property>
+                <layout manager="pack">
+                  <property name="padx">10</property>
+                  <property name="propagate">True</property>
+                  <property name="side">left</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="self.buttonAbbrechen">
+                <property name="command">abbrechen</property>
+                <property name="text" translatable="yes">Abbrechen</property>
+                <layout manager="pack">
+                  <property name="padx">10</property>
+                  <property name="propagate">True</property>
+                  <property name="side">left</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

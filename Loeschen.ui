@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="tk.Toplevel" id="buchungloeschen">
+    <property name="geometry">300x180</property>
+    <property name="height">180</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">Löschen</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="frame_1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="label_1">
+            <property name="font">{Segoe UI} 12 {bold}</property>
+            <property name="text" translatable="yes">Eigene Buchung löschen</property>
+            <layout manager="pack">
+              <property name="pady">15</property>
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label_2">
+            <property name="text" translatable="yes">Was soll mit der Buchung vom </property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="self.label_datum">
+            <property name="font">{Segoe UI} 9 {bold}</property>
+            <property name="text" translatable="yes">24.12., 3. Std.</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label_4">
+            <property name="text" translatable="yes">geschehen?</property>
+            <layout manager="pack">
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Frame" id="frame_2">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout manager="pack">
+              <property name="pady">15</property>
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+            <child>
+              <object class="ttk.Button" id="self.button_loeschen">
+                <property name="command">loeschen</property>
+                <property name="text" translatable="yes">LÖSCHEN</property>
+                <property name="width">15</property>
+                <layout manager="pack">
+                  <property name="padx">10</property>
+                  <property name="propagate">True</property>
+                  <property name="side">left</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="self.button_beibehalten">
+                <property name="command">beibehalten</property>
+                <property name="text" translatable="yes">BEIBEHALTEN</property>
+                <property name="width">15</property>
+                <layout manager="pack">
+                  <property name="padx">10</property>
+                  <property name="propagate">True</property>
+                  <property name="side">top</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

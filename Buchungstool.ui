@@ -1,0 +1,1290 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="tk.Toplevel" id="root">
+    <property name="geometry">900x630</property>
+    <property name="height">630</property>
+    <property name="resizable">both</property>
+    <property name="title" translatable="yes">Buchungstool</property>
+    <property name="width">900</property>
+    <child>
+      <object class="ttk.Frame" id="frame_1">
+        <property name="padding">5</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Panedwindow" id="panedwindow_2">
+            <property name="height">200</property>
+            <property name="orient">horizontal</property>
+            <property name="width">200</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">both</property>
+              <property name="propagate">True</property>
+              <property name="side">top</property>
+            </layout>
+            <child>
+              <object class="ttk.Panedwindow.Pane" id="pane_2">
+                <property name="weight">1</property>
+                <child>
+                  <object class="ttk.Frame" id="frame_4">
+                    <layout manager="pack">
+                      <property name="expand">true</property>
+                      <property name="fill">both</property>
+                      <property name="propagate">True</property>
+                      <property name="side">top</property>
+                    </layout>
+                    <child>
+                      <object class="ttk.Labelframe" id="labelframe_1">
+                        <property name="height">100</property>
+                        <property name="padding">5</property>
+                        <property name="text" translatable="yes">Standort</property>
+                        <layout manager="pack">
+                          <property name="fill">x</property>
+                          <property name="propagate">True</property>
+                          <property name="side">top</property>
+                        </layout>
+                        <child>
+                          <object class="ttk.Combobox" id="self.combobox_1">
+                            <property name="values">"Merzenich" "Niederzier"</property>
+                            <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="fill_listbox" add="" />
+                            <layout manager="pack">
+                              <property name="fill">x</property>
+                              <property name="propagate">True</property>
+                              <property name="side">top</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Frame" id="space1">
+                        <property name="height">8</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="propagate">True</property>
+                          <property name="side">top</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Labelframe" id="labelframe_2">
+                        <property name="height">200</property>
+                        <property name="padding">5</property>
+                        <property name="text" translatable="yes">Räume und Geräte</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="expand">true</property>
+                          <property name="fill">both</property>
+                          <property name="propagate">True</property>
+                          <property name="side">top</property>
+                        </layout>
+                        <child>
+                          <object class="tk.Listbox" id="self.listbox">
+                            <bind sequence="&lt;&lt;ListboxSelect&gt;&gt;" handler="datensatz_anzeigen" add="" />
+                            <layout manager="pack">
+                              <property name="expand">true</property>
+                              <property name="fill">both</property>
+                              <property name="propagate">True</property>
+                              <property name="side">top</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Panedwindow.Pane" id="pane_3">
+                <property name="weight">5</property>
+                <child>
+                  <object class="ttk.Labelframe" id="labelframe_3">
+                    <property name="height">200</property>
+                    <property name="text" translatable="yes">Buchung</property>
+                    <property name="width">200</property>
+                    <layout manager="pack">
+                      <property name="propagate">True</property>
+                      <property name="side">top</property>
+                    </layout>
+                    <child>
+                      <object class="ttk.Frame" id="frame_6">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="propagate">True</property>
+                          <property name="side">top</property>
+                        </layout>
+                        <child>
+                          <object class="ttk.Label" id="self.label_top">
+                            <property name="font">{Segoe UI} 12 {bold}</property>
+                            <property name="padding">20</property>
+                            <property name="text" translatable="yes">Bitte Standort und Raum bzw. Geräte auswählen.</property>
+                            <layout manager="pack">
+                              <property name="propagate">True</property>
+                              <property name="side">top</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Frame" id="frame_7">
+                            <property name="height">200</property>
+                            <property name="padding">10</property>
+                            <property name="width">200</property>
+                            <layout manager="pack">
+                              <property name="propagate">True</property>
+                              <property name="side">top</property>
+                            </layout>
+                            <child>
+                              <object class="ttk.Label" id="label_Jahr">
+                                <property name="text" translatable="yes">Jahr: </property>
+                                <layout manager="pack">
+                                  <property name="propagate">True</property>
+                                  <property name="side">left</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Combobox" id="self.combo_jahr">
+                                <property name="values">"2020" "2021" "2022" "2023"</property>
+                                <property name="width">5</property>
+                                <layout manager="pack">
+                                  <property name="propagate">True</property>
+                                  <property name="side">left</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Frame" id="frame_8">
+                                <property name="height">20</property>
+                                <property name="width">20</property>
+                                <layout manager="pack">
+                                  <property name="propagate">True</property>
+                                  <property name="side">left</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_Monat">
+                                <property name="text" translatable="yes">Monat: </property>
+                                <layout manager="pack">
+                                  <property name="propagate">True</property>
+                                  <property name="side">left</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Combobox" id="self.combo_monat">
+                                <property name="width">12</property>
+                                <layout manager="pack">
+                                  <property name="propagate">True</property>
+                                  <property name="side">left</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Frame" id="frame_8_1">
+                                <property name="height">20</property>
+                                <property name="width">20</property>
+                                <layout manager="pack">
+                                  <property name="propagate">True</property>
+                                  <property name="side">left</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Button" id="self.button_month">
+                                <property name="command">setMonth</property>
+                                <property name="text" translatable="yes">OK</property>
+                                <property name="width">5</property>
+                                <layout manager="pack">
+                                  <property name="propagate">True</property>
+                                  <property name="side">top</property>
+                                </layout>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Frame" id="frame_9">
+                        <property name="height">80</property>
+                        <property name="width">500</property>
+                        <layout manager="pack">
+                          <property name="propagate">True</property>
+                          <property name="side">top</property>
+                        </layout>
+                        <child>
+                          <object class="tk.Button" id="button_weekbefore">
+                            <property name="command">weekbefore</property>
+                            <property name="font">{Segoe UI Black} 16 {}</property>
+                            <property name="padx">5</property>
+                            <property name="relief">flat</property>
+                            <property name="text" translatable="yes">◄</property>
+                            <layout manager="pack">
+                              <property name="padx">5</property>
+                              <property name="pady">5</property>
+                              <property name="propagate">True</property>
+                              <property name="side">left</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Label" id="self.label_Woche">
+                            <property name="anchor">center</property>
+                            <property name="font">{Segoe UI} 10 {bold}</property>
+                            <property name="text" translatable="yes">----</property>
+                            <property name="width">25</property>
+                            <layout manager="pack">
+                              <property name="padx">5</property>
+                              <property name="propagate">True</property>
+                              <property name="side">left</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="tk.Button" id="button_weekafter">
+                            <property name="command">weekafter</property>
+                            <property name="font">{Segoe UI} 16 {}</property>
+                            <property name="padx">5</property>
+                            <property name="relief">flat</property>
+                            <property name="text" translatable="yes">►</property>
+                            <layout manager="pack">
+                              <property name="ipadx">2</property>
+                              <property name="padx">5</property>
+                              <property name="pady">5</property>
+                              <property name="propagate">True</property>
+                              <property name="side">left</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Frame" id="frame_11">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="propagate">True</property>
+                          <property name="side">top</property>
+                        </layout>
+                        <child>
+                          <object class="ttk.Frame" id="frame_1_2">
+                            <property name="height">200</property>
+                            <property name="width">200</property>
+                            <layout manager="pack">
+                              <property name="propagate">True</property>
+                              <property name="side">left</property>
+                            </layout>
+                            <child>
+                              <object class="ttk.Label" id="label_Std">
+                                <property name="text" translatable="yes">Std.</property>
+                                <layout manager="grid">
+                                  <property name="padx">30</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property type="col" id="0" name="minsize">0</property>
+                                  <property type="row" id="0" name="minsize">0</property>
+                                  <property type="row" id="0" name="pad">0</property>
+                                  <property type="row" id="0" name="uniform" />
+                                  <property type="row" id="0" name="weight">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_Mo">
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">Mo</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="padx">5</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">n</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="0" name="minsize">0</property>
+                                  <property type="row" id="0" name="pad">0</property>
+                                  <property type="row" id="0" name="uniform" />
+                                  <property type="row" id="0" name="weight">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="self.label_Mo_date">
+                                <property name="anchor">center</property>
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">--</property>
+                                <property name="width">5</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="padx">5</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">s</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_Di">
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">Di</property>
+                                <property name="wraplength">40</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="padx">5</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">n</property>
+                                  <property type="col" id="2" name="minsize">0</property>
+                                  <property type="row" id="0" name="minsize">0</property>
+                                  <property type="row" id="0" name="pad">0</property>
+                                  <property type="row" id="0" name="uniform" />
+                                  <property type="row" id="0" name="weight">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="self.label_Di_date">
+                                <property name="anchor">center</property>
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">--</property>
+                                <property name="width">5</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">s</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_Mi">
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">Mi</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="padx">5</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">n</property>
+                                  <property type="col" id="3" name="minsize">0</property>
+                                  <property type="row" id="0" name="minsize">0</property>
+                                  <property type="row" id="0" name="pad">0</property>
+                                  <property type="row" id="0" name="uniform" />
+                                  <property type="row" id="0" name="weight">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="self.label_Mi_date">
+                                <property name="anchor">center</property>
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">--</property>
+                                <property name="width">5</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">s</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_Do">
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">Do</property>
+                                <property name="wraplength">40</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="padx">5</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">n</property>
+                                  <property type="col" id="4" name="minsize">0</property>
+                                  <property type="row" id="0" name="minsize">0</property>
+                                  <property type="row" id="0" name="pad">0</property>
+                                  <property type="row" id="0" name="uniform" />
+                                  <property type="row" id="0" name="weight">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="self.label_Do_date">
+                                <property name="anchor">center</property>
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">--</property>
+                                <property name="width">5</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">s</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_Fr">
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">Fr\n</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="padx">5</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">n</property>
+                                  <property type="col" id="4" name="minsize">0</property>
+                                  <property type="row" id="0" name="minsize">0</property>
+                                  <property type="row" id="0" name="pad">0</property>
+                                  <property type="row" id="0" name="uniform" />
+                                  <property type="row" id="0" name="weight">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="self.label_Fr_date">
+                                <property name="anchor">center</property>
+                                <property name="justify">center</property>
+                                <property name="text" translatable="yes">--</property>
+                                <property name="width">5</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">0</property>
+                                  <property name="sticky">s</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_1Std">
+                                <property name="text" translatable="yes">1</property>
+                                <layout manager="grid">
+                                  <property name="column">0</property>
+                                  <property name="pady">5</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">1</property>
+                                  <property type="col" id="0" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button1_1">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set1_1</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="padx">5</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">1</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button1_2">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set1_2</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="padx">5</property>
+                                  <property name="row">1</property>
+                                  <property type="col" id="2" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button1_3">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set1_3</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="padx">5</property>
+                                  <property name="row">1</property>
+                                  <property type="col" id="3" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button1_4">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set1_4</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="padx">5</property>
+                                  <property name="row">1</property>
+                                  <property type="col" id="4" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button1_5">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set1_5</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="padx">5</property>
+                                  <property name="row">1</property>
+                                  <property type="col" id="5" name="minsize">0</property>
+                                  <property type="col" id="5" name="pad">0</property>
+                                  <property type="col" id="5" name="uniform" />
+                                  <property type="col" id="5" name="weight">0</property>
+                                  <property type="row" id="1" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_2Std">
+                                <property name="text" translatable="yes">2</property>
+                                <layout manager="grid">
+                                  <property name="column">0</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">2</property>
+                                  <property type="col" id="0" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="2" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button2_1">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set2_1</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">2</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="2" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button2_2">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set2_2</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">2</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="2" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button2_3">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set2_3</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">2</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="2" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button2_4">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set2_4</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">2</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="2" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button2_5">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set2_5</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">2</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="2" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_3Std">
+                                <property name="text" translatable="yes">3</property>
+                                <layout manager="grid">
+                                  <property name="column">0</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">3</property>
+                                  <property type="col" id="0" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button3_1">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set3_1</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">3</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button3_2">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set3_2</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">3</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button3_3">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set3_3</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">3</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button3_4">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set3_4</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">3</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button3_5">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set3_5</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">3</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_4Std">
+                                <property name="text" translatable="yes">4</property>
+                                <layout manager="grid">
+                                  <property name="column">0</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">4</property>
+                                  <property type="col" id="0" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="4" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_5Std">
+                                <property name="text" translatable="yes">5</property>
+                                <layout manager="grid">
+                                  <property name="column">0</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">5</property>
+                                  <property type="col" id="0" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="5" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_6Std">
+                                <property name="text" translatable="yes">6</property>
+                                <layout manager="grid">
+                                  <property name="column">0</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">6</property>
+                                  <property type="col" id="0" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="6" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ttk.Label" id="label_7Std">
+                                <property name="text" translatable="yes">7</property>
+                                <layout manager="grid">
+                                  <property name="column">0</property>
+                                  <property name="propagate">True</property>
+                                  <property name="row">7</property>
+                                  <property type="col" id="0" name="minsize">0</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="7" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button4_1">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set4_1</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">4</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="4" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button4_2">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set4_2</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">4</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="4" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button4_3">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set4_3</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">4</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="4" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button4_4">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set4_4</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">4</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="4" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button4_5">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set4_5</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">4</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="4" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button5_1">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set5_1</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">5</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="5" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button5_2">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set5_2</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">5</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="5" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button5_3">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set5_3</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">5</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="5" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button5_4">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set5_4</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">5</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="5" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button5_5">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set5_5</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">5</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="5" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button6_1">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set6_1</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">6</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="6" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button6_2">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set6_2</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">6</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="6" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button6_3">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set6_3</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">6</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="6" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button6_4">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set6_4</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">6</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="6" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button6_5">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set6_5</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">6</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="6" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button7_1">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set7_1</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">1</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">7</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="7" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button7_2">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set7_2</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">2</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">7</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="7" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button7_3">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set7_3</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">3</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">7</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="7" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button7_4">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set7_4</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">4</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">7</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="7" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="tk.Button" id="self.button7_5">
+                                <property name="background">#c0c0c0</property>
+                                <property name="command">set7_5</property>
+                                <property name="height">2</property>
+                                <property name="justify">center</property>
+                                <property name="relief">flat</property>
+                                <property name="width">10</property>
+                                <layout manager="grid">
+                                  <property name="column">5</property>
+                                  <property name="pady">5</property>
+                                  <property name="row">7</property>
+                                  <property type="col" id="1" name="minsize">0</property>
+                                  <property type="col" id="1" name="pad">0</property>
+                                  <property type="col" id="5" name="minsize">50</property>
+                                  <property type="row" id="1" name="pad">10</property>
+                                  <property type="row" id="3" name="pad">10</property>
+                                  <property type="row" id="7" name="pad">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Frame" id="abstand2">
+                            <property name="height">200</property>
+                            <property name="width">30</property>
+                            <layout manager="pack" />
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
