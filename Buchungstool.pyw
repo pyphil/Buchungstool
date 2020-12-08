@@ -522,6 +522,16 @@ class BuchungstoolApp:
         root.resizable(True, True)
         root.title('Buchungstool')
 
+        frame_7.forget()
+        frame_9.forget()
+        frame_11.forget()
+
+        self.frame_7 = frame_7
+        self.frame_9 = frame_9
+        self.frame_11 = frame_11
+
+        self.start = 1
+
         # Main widget
         self.mainwindow = root
 
@@ -608,6 +618,11 @@ class BuchungstoolApp:
         """ entnimmt der Listbox den richtigen Tabellennamen und setzt den 
         Buchungsframe bzw. die Elemente aktiv TODO 
         """ 
+        if self.start == 1:
+            self.start = 0
+            self.frame_7.pack(side='top')
+            self.frame_9.pack(side='top')
+            self.frame_11.pack(side='top')
 
         self.set_cur_year_month()
 
@@ -1990,6 +2005,12 @@ class Ersteinrichtung:
         self.mainwindow.grab_set()
         self.mainwindow.focus_set() 
 
+        # Window Deletion abfangen und schließen
+        def on_closing():
+            self.abbrechen()
+
+        self.mainwindow.protocol("WM_DELETE_WINDOW", on_closing)
+
         # mainloop
         self.mainwindow.mainloop()
 
@@ -2015,6 +2036,7 @@ class Ersteinrichtung:
 
     def abbrechen(self):
         self.mainwindow.destroy()
+        self.app.mainwindow.destroy()
 
 
 if __name__ == '__main__':
