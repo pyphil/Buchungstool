@@ -37,7 +37,7 @@ class BuchungstoolApp:
         labelframe_2.config(height='200', padding='5', text='Räume und Geräte', width='200')
         labelframe_2.pack(expand='true', fill='both', side='top')
         frame_4.pack(expand='true', fill='both', side='top')
-        panedwindow_2.add(frame_4, weight='1')
+        panedwindow_2.add(frame_4, weight='7')
         labelframe_3 = ttk.Labelframe(panedwindow_2)
         frame_6 = ttk.Frame(labelframe_3)
         self.label_top = ttk.Label(frame_6)
@@ -541,7 +541,7 @@ class BuchungstoolApp:
         windowHeight = self.mainwindow.winfo_reqheight()
         # Gets both half the screen width/height and window width/height
         positionRight = int(self.mainwindow.winfo_screenwidth()/2 - windowWidth/2)
-        positionDown = int(self.mainwindow.winfo_screenheight()/2 - windowHeight/2-15)
+        positionDown = int(self.mainwindow.winfo_screenheight()/2 - windowHeight/2-35)
         # Positions the window in the center of the page.
         self.mainwindow.geometry("+{}+{}".format(positionRight, positionDown))
 
