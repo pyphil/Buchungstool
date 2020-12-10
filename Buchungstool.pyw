@@ -2016,23 +2016,27 @@ class Ersteinrichtung:
 
     def ok(self):
         mykrzl = self.krzEntry.get()
-        # DB-Verbindung
-        verbindung = sqlite3.connect(sqlitedb)
-        c = verbindung.cursor()    
+        if mykrzl == "":
+            pass
+        else:
+                        
+            # DB-Verbindung
+            verbindung = sqlite3.connect(sqlitedb)
+            c = verbindung.cursor()    
 
-        username = getlogin()
+            username = getlogin()
 
-        c.execute(""" INSERT INTO users (username, krzl)
-                      VALUES (?,?)
-                      """,
-                      (username, mykrzl))
-        verbindung.commit()
+            c.execute(""" INSERT INTO users (username, krzl)
+                        VALUES (?,?)
+                        """,
+                        (username, mykrzl))
+            verbindung.commit()
 
-        # DB-Verindung schließen
-        c.close()
-        verbindung.close()        
-        self.app.mykrzl = mykrzl
-        self.mainwindow.destroy()
+            # DB-Verindung schließen
+            c.close()
+            verbindung.close()        
+            self.app.mykrzl = mykrzl
+            self.mainwindow.destroy()
 
     def abbrechen(self):
         self.mainwindow.destroy()
