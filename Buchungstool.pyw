@@ -2015,9 +2015,11 @@ class Ersteinrichtung:
         self.mainwindow.mainloop()
 
     def ok(self):
-        mykrzl = self.krzEntry.get()
+        mykrzl = self.krzEntry.get().upper()
         if mykrzl == "":
-            pass
+            messagebox.showerror("Kein Kürzel","Bitte ein Kürzel eingeben.")
+        elif len(mykrzl) != 3:
+            messagebox.showerror("Falsches Kürzel","Bitte ein Kürzel mit drei Buchstaben eingeben.")
         else:
                         
             # DB-Verbindung
