@@ -88,7 +88,7 @@ class BuchungstoolApp:
         frame_1_2 = ttk.Frame(frame_11)
         label_Std = ttk.Label(frame_1_2)
         label_Std.config(text='Std.')
-        label_Std.grid(padx='30', row='0')
+        label_Std.grid(padx='20', row='0')
         label_Std.rowconfigure('0', minsize='0', pad='0', uniform='None', weight='0')
         label_Std.columnconfigure('0', minsize='0')
         label_Mo = ttk.Label(frame_1_2)
@@ -517,8 +517,8 @@ class BuchungstoolApp:
         panedwindow_2.pack(expand='true', fill='both', side='top')
         frame_1.config(padding='5')
         frame_1.pack(expand='true', fill='both', side='top')
-        root.config(height='630', width='1024')
-        root.geometry('1024x630')
+        root.config(height='630', width='1000')
+        root.geometry('1000x630')
         root.resizable(True, True)
         root.title('Buchungstool')
 
@@ -540,7 +540,7 @@ class BuchungstoolApp:
         windowWidth = self.mainwindow.winfo_reqwidth()
         windowHeight = self.mainwindow.winfo_reqheight()
         # Gets both half the screen width/height and window width/height
-        positionRight = int(self.mainwindow.winfo_screenwidth()/2 - windowWidth/2)
+        positionRight = int(self.mainwindow.winfo_screenwidth()/2 - windowWidth/2-10)
         positionDown = int(self.mainwindow.winfo_screenheight()/2 - windowHeight/2-35)
         # Positions the window in the center of the page.
         self.mainwindow.geometry("+{}+{}".format(positionRight, positionDown))
