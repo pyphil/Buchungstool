@@ -1743,9 +1743,11 @@ class Eintrag:
         # Daten in die Wiederholungs-Combobox einfüllen
         thedate = date(int(year), int(month.lstrip("0")), int(day.lstrip("0")))
         self.longlist = []
-        for i in range(24):
+        i = 1
+        while i <= 24:
             thedate = thedate + timedelta(days=7)
             self.longlist.append(thedate.strftime("%d.%m.%Y"))
+            i += 1
         
         self.combobox_repeat.config(values=self.longlist)
 
