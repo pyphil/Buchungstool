@@ -616,7 +616,7 @@ class BuchungstoolApp:
 
     def datensatz_anzeigen(self, event):
         """ entnimmt der Listbox den richtigen Tabellennamen und setzt den 
-        Buchungsframe bzw. die Elemente aktiv TODO 
+        Buchungsframe bzw. die Elemente aktiv 
         """ 
         if self.start == 1:
             self.start = 0
