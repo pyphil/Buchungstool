@@ -899,7 +899,7 @@ class BuchungstoolApp:
                 # Farbe blau setzen
                 color = '#a8cdd9'
                 # Wenn eigenes Kürzel, dann Farbe grün nutzen
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     # Farbe grün setzen
                     color = '#7dd288'
                 self.button1_1.config(background=color, text=krzl+"\n"+lgrp)
@@ -909,7 +909,7 @@ class BuchungstoolApp:
             # wenn krzl == eigenes Kürzel, dann datelistweek an 
             # Dialog "Löschen"/"Behalten" übergeben
             buchungsdatum = self.datelistweek[0][0]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             # wenn anderes Kürzel, aber nicht leer: nichts tun
             elif krzl != "":
@@ -927,12 +927,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button1_2.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[1][0]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -948,12 +948,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button1_3.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[2][0]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -969,12 +969,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button1_4.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[3][0]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -990,12 +990,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button1_5.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[4][0]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1011,12 +1011,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button2_1.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[0][1]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1032,12 +1032,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button2_2.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[1][1]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1053,12 +1053,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button2_3.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[2][1]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1074,12 +1074,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button2_4.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[3][1]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1095,12 +1095,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button2_5.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[4][1]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1116,12 +1116,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button3_1.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[0][2]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1137,12 +1137,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button3_2.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[1][2]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1158,12 +1158,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button3_3.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[2][2]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1179,12 +1179,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button3_4.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[3][2]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1200,12 +1200,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button3_5.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[4][2]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1221,12 +1221,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button4_1.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[0][3]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1242,12 +1242,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button4_2.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[1][3]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1263,12 +1263,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button4_3.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[2][3]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1284,12 +1284,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button4_4.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[3][3]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1305,12 +1305,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button4_5.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[4][3]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1326,12 +1326,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button5_1.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[0][4]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1347,12 +1347,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button5_2.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[1][4]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1368,12 +1368,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button5_3.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[2][4]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1389,12 +1389,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button5_4.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[3][4]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1410,12 +1410,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button5_5.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[4][4]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1431,12 +1431,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button6_1.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[0][5]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1452,12 +1452,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button6_2.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[1][5]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1473,12 +1473,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button6_3.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[2][5]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1494,12 +1494,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button6_4.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[3][5]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1515,12 +1515,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button6_5.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[4][5]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1536,12 +1536,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button7_1.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[0][6]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1557,12 +1557,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button7_2.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[1][6]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1578,12 +1578,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button7_3.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[2][6]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1599,12 +1599,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button7_4.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[3][6]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
@@ -1620,12 +1620,12 @@ class BuchungstoolApp:
                 pass
             else:
                 color = '#a8cdd9'
-                if krzl == self.mykrzl:
+                if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                     color = '#7dd288'
                 self.button7_5.config(background=color, text=krzl+"\n"+lgrp)      
         if set == None:
             buchungsdatum = self.datelistweek[4][6]
-            if krzl == self.mykrzl:
+            if krzl == self.mykrzl or (krzl != "" and param == "adm"):
                 Loeschen(buchungsdatum,self)
             elif krzl != "":
                 pass
