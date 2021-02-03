@@ -7,6 +7,7 @@ from datetime import date, timedelta, datetime
 import locale
 #import subprocess
 from os import getlogin
+import sys
 
 locale.setlocale(locale.LC_ALL, 'deu_deu')
 
@@ -1696,6 +1697,18 @@ class Eintrag:
         self.subheading.config(font='{Segoe UI} 10 {italic}', justify='center', 
                                text='Datum, Stunde', wraplength='200')
         self.subheading.pack(side='top')
+
+        if param == "adm":
+            frameadm = ttk.Frame(frame1)
+            Label_adm = ttk.Label(frameadm)
+            Label_adm.config(font='{Segoe UI} 9 {bold}', text='Kürzel: ')
+            Label_adm.pack(side='left')
+            self.admEntry = ttk.Entry(frameadm)
+            self.admEntry.config(font='TkDefaultFont', validate='none')
+            self.admEntry.pack(side='left')
+            frameadm.config(height='200', width='200')
+            frameadm.pack(pady='10', side='top')
+
         frame2 = ttk.Frame(frame1)
         Label_lgrp = ttk.Label(frame2)
         Label_lgrp.config(font='{Segoe UI} 9 {bold}', text='Lerngruppe: ')
@@ -1728,8 +1741,12 @@ class Eintrag:
         frame1.config(height='200', width='200')
         frame1.pack(expand='true', side='top')
         eintrag.config(height='230', width='280')
-        eintrag.geometry('280x230')
-        eintrag.title('Eintrag')
+        if param == "adm":
+            eintrag.geometry('280x280')
+            eintrag.title('Eintrag ADM')
+        else:
+            eintrag.geometry('280x230')
+            eintrag.title('Eintrag')
 
         # Label für Datum und Stunde anpassen
         self.datum_std = self.d.split("_")
@@ -1776,6 +1793,9 @@ class Eintrag:
         """ Stellt eine DB-Verbindung her, prüft, ob sich um eine Serie
         handelt und schreibt in die DB
         """
+        if param == "adm":
+            self.k = self.admEntry.get()
+
         # DB-Verbindung
         verbindung = sqlite3.connect(sqlitedb)
         c = verbindung.cursor()
@@ -2048,5 +2068,9 @@ class Ersteinrichtung:
 
 
 if __name__ == '__main__':
+    try:
+        param = sys.argv[1:][0]
+    except:
+        param = 0
     app = BuchungstoolApp()
     app.run()
