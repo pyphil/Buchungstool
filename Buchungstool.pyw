@@ -567,8 +567,8 @@ class BuchungstoolApp:
                         ("Tabletkoffer 2 EG Alt - Noch nicht buchbar","MTw2"),
                         ("Tabletkoffer 3 OG - Noch nicht buchbar","MTw3")]
 
-        self.itemsNZ = [("Großer Computerraum N106 (aktuell nur 10 SuS)","gCR"),
-                        ("Kleiner Computerraum N107 (aktuell nur 5 SuS)","kCR"),
+        self.itemsNZ = [("Großer Computerraum N106 (max. 16 SuS = 1 pro PC)","gCR"),
+                        ("Kleiner Computerraum N107 (max. 9 SuS = 1 pro PC)","kCR"),
                         ("Tabletkoffer 1 EG ALT + TC/BIO - Noch nicht buchbar","NTw1"),
                         ("Tabletkoffer 2 OG ALT - Noch nicht buchbar","NTw2"),
                         ("Tabletkoffer 3 OG 2 ALT - Noch nicht buchbar","NTw3"),
