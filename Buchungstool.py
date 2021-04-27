@@ -666,7 +666,8 @@ class BuchungstoolApp:
             # Monat liegt, anhängen an weeks
             # leading zero, führende Null hinzufügen: "%02d" % (self.m,)
             if ("%02d" % (self.m,)) != date_fr.split("-")[1] and w == 0:
-                pass
+                # Wenn ausgefiltert, currentweek um eine Woche erniedrigen
+                w -= 1
             else:
                 self.weeks.append(oneweek)
             w += 1
@@ -735,7 +736,7 @@ class BuchungstoolApp:
             self.set_buchungen()
 
     def weekafter(self, set=None):
-        if self.weekno+1 <= len(self.weeks)-1:
+        if self.weekno+1 <= len(self.weeks)-1 or set == True:
             self.resetButtons()
             # wenn zu Beginn aus setmonth aufgerufen, aktuelle Woche benutzen
             if set==True:
