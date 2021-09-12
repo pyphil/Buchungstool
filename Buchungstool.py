@@ -563,9 +563,9 @@ class BuchungstoolApp:
         self.listbox.config(exportselection=False)
 
         self.itemsMZ = [("Computerraum","MCR"),
-                        ("iPad-Koffer 1 EG Neu - Noch nicht buchbar","MTw1"),
-                        ("iPad-Koffer 2 EG Alt - Noch nicht buchbar","MTw2"),
-                        ("iPad-Koffer 3 OG - Noch nicht buchbar","MTw3")]
+                        ("iPad-Koffer A: EG Neu - Noch nicht buchbar","MTw1"),
+                        ("iPad-Koffer B: EG Alt - Noch nicht buchbar","MTw2"),
+                        ("iPad-Koffer C: OG - Noch nicht buchbar","MTw3")]
 
         self.itemsNZ = [("Großer Computerraum N106 (max. 16 SuS = 1 pro PC)","gCR"),
                         ("Kleiner Computerraum N107 (max. 9 SuS = 1 pro PC)","kCR"),
