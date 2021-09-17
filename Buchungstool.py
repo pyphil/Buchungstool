@@ -563,17 +563,18 @@ class BuchungstoolApp:
         self.listbox.config(exportselection=False)
 
         self.itemsMZ = [("Computerraum","MCR"),
-                        ("Tabletkoffer 1 EG Neu - Noch nicht buchbar","MTw1"),
-                        ("Tabletkoffer 2 EG Alt - Noch nicht buchbar","MTw2"),
-                        ("Tabletkoffer 3 OG - Noch nicht buchbar","MTw3")]
+                        ("iPad-Koffer A: EG Neu - Noch nicht buchbar","MTw1"),
+                        ("iPad-Koffer B: EG Alt - Noch nicht buchbar","MTw2"),
+                        ("iPad-Koffer C: OG - Noch nicht buchbar","MTw3")]
 
         self.itemsNZ = [("Großer Computerraum N106 (max. 16 SuS = 1 pro PC)","gCR"),
                         ("Kleiner Computerraum N107 (max. 9 SuS = 1 pro PC)","kCR"),
-                        ("Tabletkoffer 1 EG ALT + TC/BIO - Noch nicht buchbar","NTw1"),
-                        ("Tabletkoffer 2 OG ALT - Noch nicht buchbar","NTw2"),
-                        ("Tabletkoffer 3 OG 2 ALT - Noch nicht buchbar","NTw3"),
-                        ("Tabletkoffer 4 EG NEU - Noch nicht buchbar","NTw4"),
-                        ("Tabletkoffer 5 OG NEU - Noch nicht buchbar","NTw5"),
+                        ("iPad-Koffer A: EG ALT + TC/BIO - Noch nicht buchbar","NTw1"),
+                        ("iPad-Koffer B: OG ALT - Noch nicht buchbar","NTw2"),
+                        ("iPad-Koffer C: OG ALT 2 - Noch nicht buchbar","NTw3"),
+                        ("iPad-Koffer D: 2.OG ALT - Noch nicht buchbar","NTw4"),
+                        ("iPad-Koffer E: EG NEU - Noch nicht buchbar","NTw5"),
+                        ("iPad-Koffer F: OG NEU - Noch nicht buchbar","NTw6"),
                         ("Besprechungsraum", "NBespr")]
 
         # Kürzel aus aus DB holen bzw. Ersteinrichtung anzeigen
