@@ -569,12 +569,12 @@ class BuchungstoolApp:
 
         self.itemsNZ = [("Großer Computerraum N106 (max. 16 SuS = 1 pro PC)","gCR"),
                         ("Kleiner Computerraum N107 (max. 9 SuS = 1 pro PC)","kCR"),
-                        ("iPad-Koffer A: EG ALT + TC/BIO - Noch nicht buchbar","NTw1"),
-                        ("iPad-Koffer B: OG ALT - Noch nicht buchbar","NTw2"),
-                        ("iPad-Koffer C: OG ALT 2 - Noch nicht buchbar","NTw3"),
+                        ("iPad-Koffer A: TC/BIO - Standort: N004","NTw1"),
+                        ("iPad-Koffer B: EG ALT - Noch nicht buchbar","NTw2"),
+                        ("iPad-Koffer C: OG ALT - Noch nicht buchbar","NTw3"),
                         ("iPad-Koffer D: 2.OG ALT - Noch nicht buchbar","NTw4"),
-                        ("iPad-Koffer E: EG NEU - Noch nicht buchbar","NTw5"),
-                        ("iPad-Koffer F: OG NEU - Noch nicht buchbar","NTw6"),
+                        ("iPad-Koffer E: EG NEU - Standort: N071","NTw5"),
+                        ("iPad-Koffer F: OG NEU - Standort: N126","NTw6"),
                         ("Besprechungsraum", "NBespr")]
 
         # Kürzel aus aus DB holen bzw. Ersteinrichtung anzeigen
