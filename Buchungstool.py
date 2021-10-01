@@ -565,11 +565,11 @@ class BuchungstoolApp:
         self.itemsMZ = [("Computerraum","MCR"),
                         ("iPad-Koffer A: EG Neu - Noch nicht buchbar","MTw1"),
                         ("iPad-Koffer B: EG Alt - Noch nicht buchbar","MTw2"),
-                        ("iPad-Koffer C: OG - Noch nicht buchbar","MTw3")]
+                        ("iPad-Koffer C: OG - Standort: OL-Büro","MTw3")]
 
         self.itemsNZ = [("Großer Computerraum N106 (max. 16 SuS = 1 pro PC)","gCR"),
                         ("Kleiner Computerraum N107 (max. 9 SuS = 1 pro PC)","kCR"),
-                        ("iPad-Koffer A: TC/BIO - Standort: N004","NTw1"),
+                        ("iPad-Koffer A: TC/BIO - Standort: N002","NTw1"),
                         ("iPad-Koffer B: EG ALT - Noch nicht buchbar","NTw2"),
                         ("iPad-Koffer C: OG ALT - Noch nicht buchbar","NTw3"),
                         ("iPad-Koffer D: 2.OG ALT - Noch nicht buchbar","NTw4"),
