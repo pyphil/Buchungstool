@@ -563,23 +563,26 @@ class BuchungstoolApp:
         self.listbox.config(exportselection=False)
 
         self.itemsMZ = [("Computerraum","MCR"),
-                        ("iPad-Koffer A: EG Neu - Noch nicht buchbar","MTw1"),
-                        ("iPad-Koffer B: EG Alt - Noch nicht buchbar","MTw2"),
+                        ("iPad-Koffer A: EG Neu - Standort Bücherraum","MTw1"),
+                        ("iPad-Koffer B: EG Alt - Standort: Insel","MTw2"),
                         ("iPad-Koffer C: OG - Standort: OL-Büro","MTw3")]
 
-        self.itemsNZ = [("Großer Computerraum N106 (max. 16 SuS = 1 pro PC)","gCR"),
-                        ("Kleiner Computerraum N107 (max. 9 SuS = 1 pro PC)","kCR"),
+        self.itemsNZ = [("Großer Computerraum N106","gCR"),
+                        ("Kleiner Computerraum N107","kCR"),
                         ("iPad-Koffer A: TC/BIO - Standort: N002","NTw1"),
                         ("iPad-Koffer B: EG ALT - Standort: Adminbüro","NTw2"),
                         ("iPad-Koffer C: OG ALT - Noch nicht buchbar","NTw3"),
                         ("iPad-Koffer D: 2.OG ALT - Noch nicht buchbar","NTw4"),
                         ("iPad-Koffer E: EG NEU - Standort: N071","NTw5"),
                         ("iPad-Koffer F: OG NEU - Standort: N126","NTw6"),
+                        ("Mathe Ausleihe Körper 1","NMk1"),
+                        ("Mathe Ausleihe Körper 2","NMk2"),
+                        ("Mathe Ausleihe Körper 3","NMk3"),
+                        ("Mathe Ausleihe Körper 4","NMk4"),
+                        ("Mathe Ausleihe Körper 5","NMk5"),
                         ("Besprechungsraum", "NBespr")]
 
         # Kürzel aus aus DB holen bzw. Ersteinrichtung anzeigen
-        
-
         # DB-Verbindung
         verbindung = sqlite3.connect(sqlitedb)
         c = verbindung.cursor()    
@@ -587,15 +590,15 @@ class BuchungstoolApp:
         username = getlogin()
 
         items = list(c.execute(""" SELECT krzl
-                                FROM users 
+                                FROM users
                                 WHERE username = ?
                                 """,
                                 (username,)))
-        
+
         # DB-Verindung schließen
         c.close()
         verbindung.close()
-        
+
         if items == []:
             Ersteinrichtung(self)
         else:
