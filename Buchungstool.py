@@ -575,11 +575,13 @@ class BuchungstoolApp:
                         ("iPad-Koffer D: 2.OG ALT - Noch nicht buchbar","NTw4"),
                         ("iPad-Koffer E: EG NEU - Standort: N071","NTw5"),
                         ("iPad-Koffer F: OG NEU - Standort: N126","NTw6"),
-                        ("Mathe Ausleihe Körper 1","NMk1"),
-                        ("Mathe Ausleihe Körper 2","NMk2"),
-                        ("Mathe Ausleihe Körper 3","NMk3"),
-                        ("Mathe Ausleihe Körper 4","NMk4"),
-                        ("Mathe Ausleihe Körper 5","NMk5"),
+                        ("Mathe Ausleihe Körpermodelle 1","NMk1"),
+                        ("Mathe Ausleihe Körpermodelle 2","NMk2"),
+                        ("Mathe Ausleihe Körpermodelle 3","NMk3"),
+                        ("Mathe Ausleihe Körpermodelle 4","NMk4"),
+                        ("Mathe Ausleihe Körpermodelle 5","NMk5"),
+                        ("Mathe Ausleihe Körpermodelle 6","NMk6"),
+                        ("Mathe Ausleihe Körpermodelle 7","NMk7"),
                         ("Besprechungsraum", "NBespr")]
 
         # Kürzel aus aus DB holen bzw. Ersteinrichtung anzeigen
