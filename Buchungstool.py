@@ -563,9 +563,9 @@ class BuchungstoolApp:
         self.listbox.config(exportselection=False)
 
         self.itemsMZ = [("Computerraum","MCR"),
-                        ("iPad-Koffer A: EG Neu - Standort Bücherraum","MTw1"),
-                        ("iPad-Koffer B: EG Alt - Standort: Insel","MTw2"),
-                        ("iPad-Koffer C: OG - Standort: OL-Büro","MTw3")]
+                        ("iPad-Koffer A: EG Neu - Standort: M051","MTw1"),
+                        ("iPad-Koffer C: EG Alt - Insel - Noch nicht buchbar","MTw2"),
+                        ("iPad-Koffer B: OG - Standort: Lehrerarbeitsraum","MTw3")]
 
         self.itemsNZ = [("Großer Computerraum N106","gCR"),
                         ("Kleiner Computerraum N107","kCR"),
@@ -581,7 +581,7 @@ class BuchungstoolApp:
                         ("Mathe Ausleihe Körpermodelle 4","NMk4"),
                         ("Mathe Ausleihe Körpermodelle 5","NMk5"),
                         ("Mathe Ausleihe Körpermodelle 6","NMk6"),
-                        ("Mathe Ausleihe Körpermodelle 7","NMk7"),
+                        ("Mathe Ausleihe Körpermodelle 7 - Merzenich","NMk7"),
                         ("Besprechungsraum", "NBespr")]
 
         # Kürzel aus aus DB holen bzw. Ersteinrichtung anzeigen
