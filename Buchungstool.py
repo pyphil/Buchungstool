@@ -572,7 +572,7 @@ class BuchungstoolApp:
                         ("iPad-Koffer A: TC/BIO - Standort: N002","NTw1"),
                         ("iPad-Koffer B: EG ALT - Standort: Adminbüro","NTw2"),
                         ("iPad-Koffer C: OG ALT - Standort: N114","NTw3"),
-                        ("iPad-Koffer D: 2.OG ALT - Noch nicht buchbar","NTw4"),
+                        ("iPad-Koffer D: 2.OG ALT - Standort: N208","NTw4"),
                         ("iPad-Koffer E: EG NEU - Standort: N071","NTw5"),
                         ("iPad-Koffer F: OG NEU - Standort: N126","NTw6"),
                         ("Mathe Ausleihe Körpermodelle 1","NMk1"),
