@@ -24,6 +24,7 @@ class Buchungstool(Ui_MainWindow, QtWidgets.QMainWindow):
         #     self.resize(400, 400)
 
         self.show()
+        self.comboBoxStandort.activated.connect(self.fill_listbox)
 
         self.start = 1
 
@@ -76,12 +77,14 @@ class Buchungstool(Ui_MainWindow, QtWidgets.QMainWindow):
         self.combo_jahr.set(date.today().year)
         self.combo_monat.set(datetime.now().strftime("%B"))
 
-    def fill_listbox(self, event):
-        if self.combobox_1.get() == "Merzenich":
-            self.listbox.delete(0,"end")
-            for i in self.itemsMZ: 
-                self.listbox.insert("end",i[0])
-        if self.combobox_1.get() == "Niederzier":
+    def fill_listbox(self):
+        if self.comboBoxStandort.currentText() == "Merzenich":
+            self.tableWidget.setRowCount(len(self.itemsMZ))
+            for i in range(len(self.itemsMZ)): 
+                self.tableWidget.setItem(
+                    i, 0, QtWidgets.QTableWidgetItem(self.itemsMZ[i][0])
+                )
+        if self.comboBoxStandort.currentText() == "Niederzier":
             self.listbox.delete(0,"end")
             for i in self.itemsNZ: 
                 self.listbox.insert("end",i[0])

@@ -19,6 +19,45 @@
      <layout class="QGridLayout" name="gridLayout_7" columnstretch="1,2,0">
       <item row="0" column="0" rowspan="2">
        <layout class="QGridLayout" name="gridLayout_2">
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>40</number>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>40</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>26</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Räume/Geräte</string>
+           </property>
+          </column>
+         </widget>
+        </item>
         <item row="0" column="0">
          <layout class="QGridLayout" name="gridLayout">
           <item row="0" column="0">
@@ -69,42 +108,6 @@
            </widget>
           </item>
          </layout>
-        </item>
-        <item row="1" column="0">
-         <widget class="QTableWidget" name="tableWidget">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
-          </property>
-          <property name="selectionMode">
-           <enum>QAbstractItemView::SingleSelection</enum>
-          </property>
-          <property name="selectionBehavior">
-           <enum>QAbstractItemView::SelectRows</enum>
-          </property>
-          <attribute name="horizontalHeaderMinimumSectionSize">
-           <number>40</number>
-          </attribute>
-          <attribute name="horizontalHeaderDefaultSectionSize">
-           <number>40</number>
-          </attribute>
-          <attribute name="horizontalHeaderStretchLastSection">
-           <bool>true</bool>
-          </attribute>
-          <attribute name="verticalHeaderDefaultSectionSize">
-           <number>26</number>
-          </attribute>
-          <column>
-           <property name="text">
-            <string>Räume/Geräte</string>
-           </property>
-          </column>
-         </widget>
         </item>
        </layout>
       </item>
@@ -382,7 +385,7 @@
           </item>
          </layout>
         </item>
-        <item row="1" column="0">
+        <item row="2" column="0">
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="3" column="2">
            <widget class="QPushButton" name="button2_2">
@@ -1445,6 +1448,13 @@
            </widget>
           </item>
          </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
